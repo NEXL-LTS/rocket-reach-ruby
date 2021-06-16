@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rocketreach.co/v2/api/search
+    body:
+      encoding: UTF-8
+      string: '{"query":{"name":["Susan Clayton"],"location":["United Kingdom"],"current_title":["Marketing
+        Manager"],"current_employer":["eversheds-sutherland.com"]},"order_by":"popularity"}'
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Content-Type:
+      - application/json
+      Api-Key:
+      - api_key
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 16 Jun 2021 06:03:48 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '434'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.18.0 (Ubuntu)
+      Allow:
+      - POST, OPTIONS
+      P3p:
+      - CP="NON DSP COR CURa TIA"
+      Vary:
+      - Accept-Encoding, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - sessionid-20191028=hhw40cx0v8t4zr032h96k6al9i0n4p3v; expires=Sun, 15 Aug 2021
+        06:03:48 GMT; HttpOnly; Max-Age=5184000; Path=/; SameSite=lax
+    body:
+      encoding: ASCII-8BIT
+      string: '{"pagination":{"start":1,"next":2,"total":1},"profiles":[{"id":34276497,"status":"complete","name":"Susan
+        Clayton","profile_pic":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSMsprHI3q3WadMm5DxPoHeFviZ8CfFNLj7RjdRuWKoHDYD3UW4tpdgLxI","links":null,"linkedin_url":"https://www.linkedin.com/in/susanjclayton","location":"Sandwell,
+        Sandwell, United Kingdom","city":"Sandwell","region":null,"country_code":"UK","current_title":"Digital
+        Project Manager","current_employer":"Eversheds Sutherland","teaser":{"emails":["dlapiper.com","dune45digital.com"],"phones":[],"office_phones":[],"preview":[],"is_premium_phone_available":false}}]}'
+  recorded_at: Wed, 16 Jun 2021 06:03:44 GMT
+recorded_with: VCR 6.0.0
