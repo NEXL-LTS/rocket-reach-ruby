@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe RocketReach::Configuration do
   let(:api_key) { "api_key" }
   before do

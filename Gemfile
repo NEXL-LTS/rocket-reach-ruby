@@ -11,5 +11,7 @@ gem "multi_json"
 gem "rake", "~> 13.0"
 gem "rspec", "~> 3.0"
 gem "rubocop", "~> 1.7"
+gem "rubocop-rake"
+gem "rubocop-rspec"
 gem "vcr", ">= 6.0.0", require: false
 gem "webmock", ">= 3.10.0"
