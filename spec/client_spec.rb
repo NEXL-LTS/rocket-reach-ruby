@@ -5,7 +5,7 @@ RSpec.describe RocketReach::Client do
         name: "Susan Clayton",
         current_title: "Marketing Manager",
         location: "United Kingdom",
-        domain: "eversheds-sutherland.com"
+        current_employer: "eversheds-sutherland.com"
       )
     end
   end
