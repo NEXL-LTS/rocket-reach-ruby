@@ -1,7 +1,7 @@
 module RocketReach
   class Client
     class << self
-      def fetch(name: nil, current_title: nil, location: nil, domain: nil, order_by: "popularity")
+      def fetch(name: nil, current_title: nil, location: nil, current_employer: nil, order_by: "popularity")
         response = Faraday.post(url) do |req|
           req.headers["Content-Type"] = "application/json"
           req.headers["Api-Key"] = api_key
@@ -10,7 +10,7 @@ module RocketReach
               name: Array.wrap(name),
               location: Array.wrap(location),
               current_title: Array.wrap(current_title),
-              current_employer: Array.wrap(domain)
+              current_employer: Array.wrap(current_employer)
             },
             order_by: order_by
           }.to_json
