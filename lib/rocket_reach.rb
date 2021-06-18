@@ -7,6 +7,7 @@ require "multi_json"
 require_relative "rocket_reach/client"
 require_relative "rocket_reach/configuration"
 require_relative "rocket_reach/version"
+require_relative "rocket_reach/error"
 
 module RocketReach
   class << self
