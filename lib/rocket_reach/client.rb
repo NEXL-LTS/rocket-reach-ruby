@@ -7,7 +7,7 @@ module RocketReach
         response = Faraday.post(url) do |req|
           req.headers["Content-Type"] = "application/json"
           req.headers["Api-Key"] = api_key
-          req.body = { query: query.transform_values! { |e| Array.wrap(e) },
+          req.body = { query: query.transform_values { |e| Array.wrap(e) },
                        order_by: order_by, start: start, page_size: page_size }.to_json
         end
         MultiJson.load(response.body)
