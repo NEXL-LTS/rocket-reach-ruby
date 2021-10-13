@@ -19,7 +19,7 @@ module RocketReach
         response = Faraday.get(lookup_profile_url) do |req|
           req.headers["Content-Type"] = "application/json"
           req.headers["Api-Key"] = api_key
-          req.body = request.to_json
+          req.params = request
         end
         MultiJson.load(response.body)
       rescue Faraday::Error => e
