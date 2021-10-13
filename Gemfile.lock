@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rocket-reach (0.2.0)
+    rocket-reach (0.2.1)
 
 GEM
   remote: https://rubygems.org/

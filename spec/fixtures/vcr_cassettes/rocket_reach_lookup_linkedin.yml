@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.rocketreach.co/v2/api/lookupProfile?id=5442
+    uri: https://api.rocketreach.co/v2/api/lookupProfile?li_url=https://www.linkedin.com/in/kschachinger
     body:
       encoding: US-ASCII
       string: ''
@@ -23,11 +23,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 13 Oct 2021 02:27:20 GMT
+      - Wed, 13 Oct 2021 02:33:12 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '781'
+      - '776'
       Connection:
       - keep-alive
       Server:
@@ -64,14 +64,14 @@ http_interactions:
         as=font; rel=preload; crossorigin, <https://static.rocketreach.co/fonts/Lato/8.woff2>;
         as=font; rel=preload; crossorigin"
       Set-Cookie:
-      - sessionid-20191028=i6r96ybmymtw7a8ueqe0he4b19w51b3q; expires=Sun, 12 Dec 2021
-        02:27:20 GMT; HttpOnly; Max-Age=5184000; Path=/
+      - sessionid-20191028=i9olln0z1ht17j2xsbatmk09u22us6va; expires=Sun, 12 Dec 2021
+        02:33:12 GMT; HttpOnly; Max-Age=5184000; Path=/
     body:
       encoding: ASCII-8BIT
-      string: '{"profile_list":{"id":8384023,"name":"API Contacts"},"id":5442,"status":"progress","name":"Kristine
+      string: '{"profile_list":{"id":8384023,"name":"API Contacts"},"id":5442,"status":"complete","name":"Kristine
         Schachinger","profile_pic":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCPIO85TL6KX2_kmnOHnBUe3m2zNQgnh9AgWvDH_zU1GW-N1xSm1uU2sow","linkedin_url":"https://www.linkedin.com/in/kschachinger","links":{"geeksandbeer.com":"https://GeeksAndBeer.com","google+":"https://plus.google.com/102093493922659306009/about","standardsgirl.com":"https://StandardsGirl.com","twitter":"https://twitter.com/KSchachinger","linkedin":"https://www.linkedin.com/in/kschachinger","gravatar":"https://en.gravatar.com/0da39d2c2ae639588f82d4a13ebb9477","flickr":"https://www.flickr.com/people/56319089@N00/","siteswithoutwalls.com":"https://www.SitesWithoutWalls.com"},"location":"Las
         Vegas, Nevada, United States","current_title":"Chief Executive Officer | Founder
         Sites Without Walls - Concierge Seo, Site Audits, and Digital Marketing Strategies","current_employer":"Sites
         Without Walls Website Seo & Online Digital Marketing Consulting","current_work_email":"kschachinger@travelworm.com","current_personal_email":"schachin@gmail.com","emails":[{"email":"kschachinger@travelworm.com","smtp_valid":"valid","type":"professional"},{"email":"kristine@siteswithoutwalls.com","smtp_valid":"valid","type":"professional"},{"email":"schachin@yahoo.com","smtp_valid":"valid","type":"personal"},{"email":"schachin@gmail.com","smtp_valid":"valid","type":"personal"},{"email":"kristine.marketing@thevettersmovie.com","smtp_valid":"invalid","type":"professional"},{"email":"marketing@thevettersmovie.com","smtp_valid":"invalid","type":"professional"},{"email":"kristine@thevettersmovie.com","smtp_valid":"invalid","type":"professional"},{"email":"kristinemarketing@thevettersmovie.com","smtp_valid":"invalid","type":"professional"},{"email":"kmarketing@thevettersmovie.com","smtp_valid":"invalid","type":"professional"},{"email":"kschachinger@jetaway.com","smtp_valid":"invalid","type":"professional"},{"email":"kristinem@thevettersmovie.com","smtp_valid":"invalid","type":"professional"},{"email":"sociograd@nscee.edu","smtp_valid":"invalid","type":"professional"},{"email":"kristine_marketing@thevettersmovie.com","smtp_valid":"invalid","type":"professional"},{"email":"marketingk@thevettersmovie.com","smtp_valid":"invalid","type":"professional"}],"phones":[]}'
-  recorded_at: Wed, 13 Oct 2021 02:27:11 GMT
+  recorded_at: Wed, 13 Oct 2021 02:33:03 GMT
 recorded_with: VCR 6.0.0
