@@ -4,7 +4,7 @@ module RocketReach
   class Client
     class << self
       def search(query: {}, start: 1, page_size: 10, order_by: "popularity")
-        response = Faraday.post(search_url) do |req|
+        response = connection.post("/v2/api/search") do |req|
           req.headers["Content-Type"] = "application/json"
           req.headers["Api-Key"] = api_key
           req.body = { query: query.transform_values { |e| Array.wrap(e) },
@@ -12,32 +12,32 @@ module RocketReach
         end
         MultiJson.load(response.body)
       rescue Faraday::Error => e
-        Error.new(e)
+        raise Error.wrap(e)
       end
 
       def lookup_profile(request = {})
-        response = Faraday.get(lookup_profile_url) do |req|
+        response = connection.get("/v2/api/lookupProfile") do |req|
           req.headers["Content-Type"] = "application/json"
           req.headers["Api-Key"] = api_key
           req.params = request
         end
         MultiJson.load(response.body)
       rescue Faraday::Error => e
-        Error.new(e)
+        raise Error.wrap(e)
       end
 
       private
 
       def api_key
-        RocketReach.configuration.api_key
+        configuration.api_key
       end
 
-      def search_url
-        "https://api.rocketreach.co/v2/api/search"
+      def connection
+        configuration.connection
       end
 
-      def lookup_profile_url
-        "https://api.rocketreach.co/v2/api/lookupProfile"
+      def configuration
+        RocketReach.configuration
       end
     end
   end
