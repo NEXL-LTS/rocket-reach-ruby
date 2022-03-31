@@ -2,6 +2,9 @@ PATH
   remote: .
   specs:
     rocket-reach (0.2.1)
+      activesupport (>= 4.1.0, < 8.0)
+      faraday (>= 0.10.0, < 3.0)
+      multi_json (>= 1.4.0, < 2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -89,11 +92,9 @@ GEM
 
 PLATFORMS
   x86_64-darwin-18
+  x86_64-linux
 
 DEPENDENCIES
-  activesupport (>= 4.1.0, < 7.0)
-  faraday
-  multi_json
   rake (~> 13.0)
   rocket-reach!
   rspec (~> 3.0)
@@ -104,4 +105,4 @@ DEPENDENCIES
   webmock (>= 3.10.0)
 
 BUNDLED WITH
-   2.2.15
+   2.2.22
