@@ -12,7 +12,7 @@ jobs:
       - run:
           command: bundle install
       - run:
-          command: bin/rspec
+          command: bundle exec rspec
   min_versions:
     docker:
       - image: cimg/ruby:2.5.9
@@ -26,7 +26,7 @@ jobs:
       - run:
           command: bundle install
       - run:
-          command: bin/rspec
+          command: bundle exec rspec
 
 workflows:
   version: 2
