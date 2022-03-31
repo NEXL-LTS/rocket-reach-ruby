@@ -2,7 +2,7 @@
 
 require "faraday"
 require "json"
-require "active_support/core_ext/array"
+require "active_support/core_ext/array/wrap"
 require "multi_json"
 require_relative "rocket_reach/client"
 require_relative "rocket_reach/configuration"

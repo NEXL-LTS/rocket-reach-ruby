@@ -19,7 +19,7 @@ RSpec.describe RocketReach::Client do
   end
 
   it("has profile") {
-    expect(response["profiles"]).to be_present
+    expect(response["profiles"]).not_to be_empty
   }
 
   it("has pagination") {
