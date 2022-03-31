@@ -19,6 +19,7 @@ RSpec.describe RocketReach::Client do
   end
 
   it("has profile") {
+    expect(response["profiles"]).not_to be_nil
     expect(response["profiles"]).not_to be_empty
   }
 

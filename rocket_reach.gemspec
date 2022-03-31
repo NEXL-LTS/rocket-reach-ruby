@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "activesupport", ">= 4.1.0", "< 8.0"
-  spec.add_dependency "faraday", ">= 0.10.0", "< 3.0"
+  spec.add_dependency "faraday", ">= 1.0.0", "< 3.0"
   spec.add_dependency "multi_json", ">= 1.4.0", "< 2.0"
 
   # For more information and examples about making a new gem, checkout our

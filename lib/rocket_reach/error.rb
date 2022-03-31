@@ -5,7 +5,7 @@ module RocketReach
     attr_reader :response
 
     def initialize(err)
-      self.response = err.response if err.respond_to?(:response)
+      @response = err.response if err.respond_to?(:response)
       super(err)
     end
 
