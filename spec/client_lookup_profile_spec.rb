@@ -5,7 +5,7 @@ RSpec.describe RocketReach::Client do
     RocketReach.configuration.api_key = "api_key"
   end
 
-  describe 'search with prospect id' do
+  describe "search with prospect id" do
     let(:response) do
       VCR.use_cassette("rocket_reach_lookup") do
         described_class.lookup_profile(id: "5442")
@@ -41,7 +41,8 @@ q=tbn:ANd9GcTCPIO85TL6KX2_kmnOHnBUe3m2zNQgnh9AgWvDH_zU1GW-N1xSm1uU2sow")
     }
 
     it("has current_employer") {
-      expect(response["current_employer"]).to eq("Sites Without Walls Website Seo & Online Digital Marketing Consulting")
+      expect(response["current_employer"])
+        .to eq("Sites Without Walls Website Seo & Online Digital Marketing Consulting")
     }
 
     it("has current_title") {
@@ -50,7 +51,7 @@ q=tbn:ANd9GcTCPIO85TL6KX2_kmnOHnBUe3m2zNQgnh9AgWvDH_zU1GW-N1xSm1uU2sow")
     }
   end
 
-  describe 'search with linkedin url' do
+  describe "search with linkedin url" do
     let(:response) do
       VCR.use_cassette("rocket_reach_lookup_linkedin") do
         described_class.lookup_profile(li_url: "https://www.linkedin.com/in/kschachinger")
@@ -62,7 +63,8 @@ q=tbn:ANd9GcTCPIO85TL6KX2_kmnOHnBUe3m2zNQgnh9AgWvDH_zU1GW-N1xSm1uU2sow")
     }
 
     it("has current_employer") {
-      expect(response["current_employer"]).to eq("Sites Without Walls Website Seo & Online Digital Marketing Consulting")
+      expect(response["current_employer"])
+        .to eq("Sites Without Walls Website Seo & Online Digital Marketing Consulting")
     }
   end
 end

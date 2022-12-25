@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 module RocketReach
-  class Error < StandardError
+  Error = Class.new(StandardError)
+
+  class HttpError < Error
     attr_reader :response
 
     def initialize(err)
@@ -11,6 +13,20 @@ module RocketReach
 
     def self.wrap(error)
       new(error)
+    end
+  end
+
+  ClientError = Class.new(HttpError)
+  ServerError = Class.new(HttpError)
+
+  def self.wrap_error(faraday_error)
+    case faraday_error
+    when Faraday::ClientError
+      ClientErrorCreator.error(faraday_error)
+    when Faraday::ServerError
+      ServerErrorCreator.error(faraday_error)
+    else
+      HttpError.new(faraday_error)
     end
   end
 end

@@ -12,7 +12,7 @@ module RocketReach
         end
         MultiJson.load(response.body)
       rescue Faraday::Error => e
-        raise Error.wrap(e)
+        raise RocketReach.wrap_error(e)
       end
 
       def lookup_profile(request = {})
@@ -23,7 +23,7 @@ module RocketReach
         end
         MultiJson.load(response.body)
       rescue Faraday::Error => e
-        raise Error.wrap(e)
+        raise RocketReach.wrap_error(e)
       end
 
       private
