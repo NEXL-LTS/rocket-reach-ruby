@@ -22,9 +22,9 @@ module RocketReach
   def self.wrap_error(faraday_error)
     case faraday_error
     when Faraday::ClientError
-      ClientErrorCreator.error(faraday_error)
+      ClientError.new(faraday_error)
     when Faraday::ServerError
-      ServerErrorCreator.error(faraday_error)
+      ServerError.new(faraday_error)
     else
       HttpError.new(faraday_error)
     end
