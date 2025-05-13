@@ -14,7 +14,7 @@ gem "vcr", ">= 6.0.0", require: false
 gem "webmock", ">= 3.10.0"
 
 if ENV.fetch("GEM_VERSIONS", nil) == "min"
-  gem "activesupport", "~> 4.1.0"
+  gem "activesupport", "~> 8.0"
   gem "faraday", "~> 1.0.0"
   gem "multi_json", "~> 1.4.0"
 end
