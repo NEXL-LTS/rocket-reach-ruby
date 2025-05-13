@@ -5,8 +5,8 @@ require_relative "lib/rocket_reach/version"
 Gem::Specification.new do |spec|
   spec.name          = "rocket-reach"
   spec.version       = RocketReach::VERSION
-  spec.authors       = ["bapu sethi"]
-  spec.email         = ["bapu@nexl.io"]
+  spec.authors       = ["bapu sethi", "Connor Moot"]
+  spec.email         = ["bapu@nexl.io", "connor@nexl.cloud"]
 
   spec.summary       = "Ruby client for connecting to Rocket Reach"
   spec.description   = "Ruby client for connecting to Rocket Reach"
@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
-  spec.add_dependency "activesupport", ">= 4.1.0", "< 8.0"
+  spec.add_dependency "activesupport", ">= 4.1.0", "< 9.0"
   spec.add_dependency "faraday", ">= 1.0.0", "< 3.0"
   spec.add_dependency "multi_json", ">= 1.4.0", "< 2.0"
 
